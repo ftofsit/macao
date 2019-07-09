@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/header/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/user.css}" rel="stylesheet"/>
+</head>
+
+<body>
+<!--header-->
+<div class="title" th:include="title::title"></div>
+<!--header end-->
+
+<!--content 用戶頁面-->
+<div class="container user-register" >
+    <div class="reg_main ">
+        <div class="user-register-name">
+            <font class="iconfont"></font>
+            <font class="login-name">新用戶註冊</font>
+        </div>
+        <div class="user-register-panel">
+            <form name="formregister" action=""  method="post" onsubmit="return register()">
+                <ul>
+                    <li class="name">
+                        <input class="username" name="userName" placeholder="用戶名" maxlength="20" oninput="checkuser()">
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="userNametip"></li>
+                    <li class="telnum">
+                        <input class="login-tel" name="mobile" placeholder="手機" maxlength="20" oninput="checktel()">
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="telnum_notice"></li>
+                    <li class="sms-code">
+                        <input class="vcode" name="vcode"  placeholder="短信驗證碼"  maxlength="4" oninput="checkcode()" >
+                        <span class="error_icon"></span>
+                        <input type="button" class="getcode" name="getcode" onclick="getscode()" value="獲取驗證碼" >
+                    </li>
+                    <li class="error_box" id="smscode_notice"></li>
+                    <li class="userpwd">
+                        <input class="login-pw" name="password" type="password"  placeholder="密碼"  maxlength="20" oninput="checkuserpwd()" >
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="userpwd_notice"></li>
+                    <li class="idcard">
+                        <input class="idno" name="idNo"   placeholder="身份證號碼"   maxlength="20" oninput = "value=value.replace(/[^\d]/g,'')" >
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box"></li>
+                    <li class="career">
+                        <input class="usercareer" name="career"   placeholder="職業"  maxlength="20" oninput="checkcareer()" >
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="usercareer"></li>
+                    <li class="uploadimg">
+                        <div>上傳身份證和員工證(先上傳身份證後員工證)</div>
+                        <form action="/user/uploadFiles" method="post" enctype="multipart/form-data">
+                            <div>身份證:<img th:src=${uploadimg} onclick="openidcare();" >
+                                <input type="file" id="idcardinput" name="idImage" style="display: none;"  accept="image/png, image/jpeg, image/gif, image/jpg" />
+                            </div>
+                            <div>員工證:<img th:src=${uploadimg} onclick="openstaffImage();">
+                                <input type="file" id="staffImageinput" name="staffImage" style="display: none;"  accept="image/png, image/jpeg, image/gif, image/jpg" />
+                            </div>
+                            <input type="submit" value="提交" style="display: none">
+                        </form>
+                    </li>
+                    <li class="code">
+                        <input class="registercode" name="registercode"  placeholder="驗證碼" maxlength="4" oninput="checkcode()">
+                        <span class="error_icon"></span>
+                        <img th:src=${img_code}  id="usercode" >
+                    </li>
+                    <li class="error_box" id="usercode_notice"></li>
+                    <li class="tip">
+                        <label>
+                                <input name="agreement" type="checkbox" value="1" checked="checked" tabindex="5" class="remember-me">
+                                我已看過並接受《<a th:href=${pwd_url} style="color:blue" target="_blank">用戶協議</a>》
+                        </label>
+                    </li>
+                    <li class="error_box"></li>
+                    <li class="register-user">
+                        <input type="hidden" name="login_type" value="0" id="login_type">
+                        <input type="hidden" name="act" value="act_login">
+                        <input type="submit" name="login_submit" class="register_submit" value="註 冊">
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<!--content 用戶頁面end-->
+
+
+
+
+<div  class="text-center" th:include="footer :: copyright"></div>
+<script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/jquery/user.js}"></script>
+</body>
+</html>

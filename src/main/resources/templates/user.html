@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/header/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/user.css}" rel="stylesheet"/>
+</head>
+<body>
+<!--header-->
+<div class="title" th:include="title::title"></div>
+<!--header end-->
+
+<!--content 用戶頁面-->
+<div class="container user-login" >
+    <div class="reg_main ">
+        <div class="user-login-name">
+            <font class="iconfont"></font>
+            <font class="login-name">會員登錄</font>
+        </div>
+        <div class="user-login-panel">
+            <form name="formlogin" action=""  method="post" onsubmit="return userlogin()">
+                <ul>
+                    <li class="usernum">
+                        <input class="login-id" name="login-id" placeholder="用戶名、手機" maxlength="20" oninput="checkusernum()">
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="usernum_notice"></li>
+                    <li class="userpwd">
+                        <input class="login-pw" name="login-pw"  placeholder="密碼"  maxlength="20" oninput="checkuserpwd()" >
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="userpwd_notice"></li>
+                    <li class="code">
+                        <input class="login-code" name="login-code"  placeholder="驗證碼" maxlength="4" oninput="checkcode()">
+                        <span class="error_icon"></span>
+                        <img th:src=${img_code}  id="usercode" >
+                    </li>
+                    <li class="error_box" id="usercode_notice"></li>
+                    <li class="other">
+                        <a th:href=${pwd_url} class="retreve_pwd">短信找回密碼</a>
+                        <label>
+                            <input type="checkbox" value="0" name="remember" id="remember" class="remember">
+                            請保存我這次的登陸信息
+                        </label>
+                    </li>
+                    <li class="error_box"></li>
+                    <li class="login-user">
+                        <input type="hidden" name="login_type" value="0" id="login_type">
+                        <input type="hidden" name="act" value="act_login">
+                        <input type="submit" name="login_submit" class="login_submit" value="登 陸">
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<!--content 用戶頁面end-->
+
+
+
+
+<div  class="text-center" th:include="footer :: copyright"></div>
+<script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/jquery/user.js}"></script>
+</body>
+</html>

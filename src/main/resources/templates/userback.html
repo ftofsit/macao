@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <!--<meta content="text/html;charset=UTF-8"/>-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/css/usermessage.css}" rel="stylesheet"/>-->
+</head>
+<body>
+<div class="my_nala_centre"  th:fragment="userback">
+    <div class="ilizi">
+        <div class="box">
+            <div class="box_1">
+                <div class="sales">
+                    <h5>
+                        <spna>售後列表</spna>
+                    </h5>
+                    <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+                        <tbody>
+                        <tr>
+                            <th align="center" bgcolor="#ffffff">原訂單號</th>
+                            <th align="center" bgcolor="#ffffff">活動名稱</th>
+                            <th align="center" bgcolor="#ffffff">申請時間</th>
+                            <th align="center" bgcolor="#ffffff">應退金額</th>
+                            <th align="center" bgcolor="#ffffff">活動狀態</th>
+                            <th align="center" bgcolor="#ffffff">操作</th>
+                        </tr>
+                        <tr th:if="${ userbacks == 'no'}">
+                            <td colspan="6"  bgcolor="#ffffff">您沒有售後訂單</td>
+                        </tr>
+                        <tr th:if="${ userbacks == 'yes'}"  th:each="backs:${backs}">
+                            <td align="center" bgcolor="#ffffff" th:text=${backs.order_id}></td>
+                            <td align="center" bgcolor="#ffffff" th:text=${backs.order_name}></td>
+                            <td align="center" bgcolor="#ffffff" th:text=${backs.application_time}></td>
+                            <td align="center" bgcolor="#ffffff" th:text=${backs.amount}></td>
+                            <td align="center" bgcolor="#ffffff" th:text=${backs.act_status}></td>
+                            <td align="center" bgcolor="#ffffff" ><a th:href=${backs.cancel}>取消</a> | <a th:href=${backs.view}>查看</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

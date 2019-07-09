@@ -1,0 +1,364 @@
+.user-login{
+    text-align:center;
+}
+.reg_main{
+    width: 980px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(98,105,109,0.5);
+    margin: 50px 0px;
+    display: inline-block;
+}
+.reg_main .user-login-name{
+    border-bottom: 1px solid #131844;
+    color: #131844;
+    text-align: center;
+    font-size: 18px;
+    height: 56px;
+    line-height: 56px;
+}
+.reg_main .user-login-panel{
+    padding: 40px 0;
+    position: relative;
+}
+.reg_main .user-login-panel ul{
+    width: 400px;
+    margin: 0 auto;
+}
+.reg_main .user-login-panel ul .error_box{
+    text-align: left;
+    line-height: 24px;
+    color: #fe564b;
+    height: 26px;
+}
+.reg_main .user-login-panel ul li{
+    list-style: none;
+    line-height: 40px;
+    position: relative;
+    cursor: text;
+    zoom: 1;
+}
+.reg_main .user-login-panel ul li .login-code{
+    width:80px;
+    float:left;
+    padding-right:20px;
+    text-align: left;
+}
+.reg_main .user-login-panel ul li input{
+    width:100%;
+    padding: 0px 6px;
+}
+.reg_main .user-login-panel ul .code  .error_icon{
+    background: url(/images/error_icon.png) 0 -50px no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 60px;
+    top: 14px;
+}
+.reg_main .user-login-panel ul li .error_icon{
+    background: url(/images/error_icon.png) 0 -50px no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 10px;
+    top: 14px;
+}
+.reg_main .user-login-panel ul .code{
+    display: flow-root;
+}
+.reg_main .user-login-panel ul li #usercode{
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    left:100px;
+}
+.reg_main .user-login-panel ul .other{
+    display: flow-root;
+}
+.reg_main .user-login-panel ul .other a{
+    float:right;
+    color: #CCA866;
+    text-decoration:none;
+}
+.reg_main .user-login-panel ul .other label{
+    float:left;
+}
+.reg_main .user-login-panel ul .other .remember{
+    width:auto;
+    vertical-align:sub;
+}
+.reg_main .user-login-panel ul .login-user .login_submit{
+    background-color: #CCA866;
+    color:#fff;
+    font-size: 18px;
+    padding: 2px;
+    border:0px;
+    border-radius: 5px;
+}
+/*找回密碼*/
+.retrievepw{
+    text-align:center;
+}
+.reg_main .user-retrievepw-name{
+    border-bottom: 1px solid #131844;
+    color: #131844;
+    text-align: center;
+    font-size: 18px;
+    height: 56px;
+    line-height: 56px;
+}
+.reg_main .user-retrieve-panel{
+    padding: 40px 0;
+    position: relative;
+}
+.reg_main .user-retrieve-panel ul{
+    width: 400px;
+    margin: 0 auto;
+}
+.reg_main .user-retrieve-panel ul .error_box{
+    text-align: left;
+    line-height: 24px;
+    color: #fe564b;
+    height: 26px;
+}
+.reg_main .user-retrieve-panel ul li{
+    list-style: none;
+    line-height: 40px;
+    position: relative;
+    cursor: text;
+    zoom: 1;
+}
+.reg_main .user-retrieve-panel ul .sms-code{
+    display: flex;
+}
+.reg_main .user-retrieve-panel ul li .vcode{
+    width: 70%;
+    float: left;
+}
+.reg_main .user-retrieve-panel ul li .getcode{
+    width: 30%;
+    float: left;
+}
+.reg_main .user-retrieve-panel ul li input {
+    width: 100%;
+    padding: 0px 6px;
+}
+.reg_main .user-retrieve-panel ul .sms-code .error_icon {
+    background: url(/images/error_icon.png) 0 -50px no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 120px;
+    top: 14px;
+}
+.reg_main .user-retrieve-panel ul li .error_icon {
+    background: url(/images/error_icon.png) 0 -50px no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 10px;
+    top: 14px;
+}
+.reg_main .user-retrieve-panel ul .change-pw-submit .change_submit{
+    background-color: #CCA866;
+    color:#fff;
+    font-size: 18px;
+    padding: 2px;
+    border:0px;
+    border-radius: 5px;
+}
+.reg_main .user-retrieve-panel ul .return-page .return_submit{
+    background-color: #CCA866;
+    color:#fff;
+    font-size: 18px;
+    padding: 2px;
+    border:0px;
+    border-radius: 5px;
+}
+
+/* 用戶註冊 */
+.user-register{
+    text-align:center;
+}
+.reg_main{
+    width: 980px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(98,105,109,0.5);
+    margin: 50px 0px;
+    display: inline-block;
+}
+.reg_main .user-register-name{
+    border-bottom: 1px solid #131844;
+    color: #131844;
+    text-align: center;
+    font-size: 18px;
+    height: 56px;
+    line-height: 56px;
+}
+.reg_main .user-register-panel{
+    padding: 40px 0;
+    position: relative;
+}
+.reg_main .user-register-panel ul{
+    width: 400px;
+    margin: 0 auto;
+}
+.reg_main .user-register-panel ul .error_box{
+    text-align: left;
+    line-height: 24px;
+    color: #fe564b;
+    height: 26px;
+}
+.reg_main .user-register-panel ul .code {
+    display: flow-root;
+}
+.reg_main .user-register-panel ul .uploadimg{
+    text-align: left;
+}
+.reg_main .user-register-panel ul .uploadimg div{
+    display: inline-flex;
+}
+.reg_main .user-register-panel ul .uploadimg div img{
+    width: 40%;
+    height: 40%;
+    margin-bottom: 1rem;
+    float: left;
+}
+.reg_main .user-register-panel ul .uploadimg div input{
+    display: inherit;
+}
+.reg_main .user-register-panel ul .tip {
+    text-align: left;
+}
+.reg_main .user-register-panel ul .tip label input{
+    width:auto;
+}
+.reg_main .user-register-panel ul li .registercode {
+    width: 80px;
+    float: left;
+    padding-right: 20px;
+    text-align: left;
+}
+.reg_main .user-register-panel ul li #usercode {
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    left: 100px;
+}
+.reg_main .user-register-panel ul li{
+    list-style: none;
+    line-height: 40px;
+    position: relative;
+    cursor: text;
+    zoom: 1;
+}
+.reg_main .user-register-panel ul .sms-code{
+    display: flex;
+}
+.reg_main .user-register-panel ul li .vcode{
+    width: 70%;
+    float: left;
+}
+.reg_main .user-register-panel ul li .getcode{
+    width: 30%;
+    float: left;
+}
+.reg_main .user-register-panel ul li input {
+    width: 100%;
+    padding: 0px 6px;
+}
+.reg_main .user-register-panel ul .sms-code .error_icon {
+    background: url(/images/error_icon.png) 0 -50px no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 120px;
+    top: 14px;
+}
+.reg_main .user-register-panel ul li .error_icon {
+    background: url(/images/error_icon.png) 0 -50px no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 10px;
+    top: 14px;
+}
+.reg_main .user-register-panel ul .change-pw-submit .change_submit{
+    background-color: #CCA866;
+    color:#fff;
+    font-size: 18px;
+    padding: 2px;
+    border:0px;
+    border-radius: 5px;
+}
+.reg_main .user-register-panel ul .return-page .return_submit{
+    background-color: #CCA866;
+    color:#fff;
+    font-size: 18px;
+    padding: 2px;
+    border:0px;
+    border-radius: 5px;
+}
+.reg_main .user-register-panel ul .register-user .register_submit{
+        background-color: #CCA866;
+        color: #fff;
+        font-size: 18px;
+        padding: 2px;
+        border: 0px;
+        border-radius: 5px;
+                                            }
+
+/*用戶中心*/
+.user-center{
+
+}
+.centerpage .slidebar{
+    float: left;
+    width: 230px;
+    padding: 20px 0;
+}
+.centerpage .slidebar .slide_item{
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.centerpage .slidebar .slide_item .item{
+    margin-bottom: 1px;
+}
+.centerpage .slidebar .slide_item .root_node{
+    padding: 5px 0 5px 15px;
+    font-size: 16px;
+    color: #FFF;
+    background: #CCA866;
+}
+.slidebar li{
+    list-style-type:none ;
+}
+.slidebar li a:hover, .slidebar li a.on {
+    color: #CCA866;
+    text-decoration: none;
+    cursor:pointer;
+}
+.centerpage .slidebar .slide_item .item ul{
+    background: #fff;
+    border: 1px solid #CCA866;
+    padding:0px;
+}
+.centerpage .slidebar .slide_item .item ul li{
+    margin-bottom:1px;
+}
+.slidebar li a{
+    display: table;
+    height: 24px;
+    line-height: 24px;
+    padding: 6px 15px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    width: 100%;
+}

@@ -1,0 +1,109 @@
+.banner-icon{
+    height:100%;
+    padding:15px 0px;
+}
+.button-style{
+    border: none;
+    font-size:15px;
+    background:0px;
+    text-shadow: none;
+    box-shadow: none;
+    padding:0px;
+}
+.shipping-cart{
+    font-size: 15px;
+    height:auto;
+    float:right;
+    background-color: #CCA866;
+    border: 1px solid #CCA866;
+    padding:10px;
+}
+.item img{
+    width:100%;
+}
+.shipping-cart{
+ padding:10px 20px;
+}
+.btn-group.open .dropdown-toggle{
+    color:red;
+    box-shadow:none ;
+}
+.dropdown-menu{
+    text-align: right;
+    min-width:175px;
+    margin:6px 0 0;
+}
+.click-button-header{
+    background-color:#CCA866;
+    padding:0.5rem 8rem;
+    margin-bottom:1rem;
+    color:#fff;
+    cursor:pointer;
+    text-align:center;
+    font-size:32px;
+    width:30%;
+    border-radius:50px;
+    margin:0 auto;
+}
+.index-goods-show{
+    margin-left:35%;
+    font-size:1.3rem;
+}
+.index-goods-show a{
+    font-size: 2rem;
+    width: 15vw;
+    text-align: center;
+}
+.tab-pane{
+    margin-bottom: 2rem;
+}
+.col-sm-6{
+    margin-top:1.5rem;
+}
+.col-md-3{
+    margin-top:1.5rem;
+}
+.carousel-indicators li {
+    background-color:#a2aaa8;
+    width:16px;
+    height:16px;
+    margin:0px;
+}
+.carousel-indicators .active{
+    background-color:#CCA866;
+    opacity: 0.9;
+    width:16px;
+    height:16px;
+}
+.title{
+    border-bottom:1px solid #ccc;
+    background-color:#fff;
+}
+.container .search_input{
+    padding:29px 0px;
+}
+.container .search_input .form-control{
+    float: left;
+    background: #fff;
+    border: 1px solid #131844;
+    height: 38px;
+    padding: 2px 0 2px 5px;
+    font-size: 18px;
+    color: #999;
+    width: 70%;
+    border-radius: 0px;
+}
+.container .search_input .search_button{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 82px;
+    height: 38px;
+    line-height: 34px;
+    font: 400 14px "microsoft yahei";
+    color: #fff;
+    border: none;
+    margin-right: 1px;
+    cursor: pointer;
+    background-color:#131844;
+}

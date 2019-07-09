@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+
+</head>
+<body>
+<div class="my_nala_centre"  th:fragment="useravatar">
+    <div class="ilizi">
+        <div class="box">
+            <div class="box_1">
+                <div class="avatar">
+                    <h5>
+                        <spna>會員頭像</spna>
+                    </h5>
+                    <div class="modify">
+                      <form name="modify-avatar" action="" method="post" enctype="multipart/form-data" class="ncm-default-form">
+                           <dl>
+                               <dt style="float: left;text-align: right">原本頭像：</dt>
+                               <dd>
+                                   <div class="user-avatar">
+                                       <span><img  th:src="${userimg}"  ></span>
+                                   </div>
+                                   <p class="avatar-tip">
+                                       完善個人信息資料，上傳頭像圖片有助於您結識更多的朋友。
+                                       <br>
+                                       <span style="color:orange">頭像最佳默認尺寸為150*150像素</span>
+                                   </p>
+                               </dd>
+                           </dl>
+                           <dl>
+                              <dt style="vertical-align: middle">更換頭像：</dt>
+                              <dd style="vertical-align: middle">
+                                  <div class="ncm-upload-btn">
+                                      <a>
+                                          <span>
+                                              <input type="file" class="headimg" name="headimg">
+                                              <!--<input type="button" onclick="upload_file()" value="上傳圖片" class="upload-btn">-->
+                                          </span>
+                                      </a>
+                                  </div>
+                              </dd>
+                           </dl>
+                           <dl>
+                               <dd style="text-align: center;width: 70%">
+                                   <label class="submit-border">
+                                       <input type="button" name="submit" class="btn-primary" value="確認修改">
+                                   </label>
+                               </dd>
+                           </dl>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

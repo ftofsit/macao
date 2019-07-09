@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <!--<meta content="text/html;charset=UTF-8"/>-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/css/usermessage.css}" rel="stylesheet"/>-->
+</head>
+<body>
+<div class="my_nala_centre"  th:fragment="userinfo">
+    <div class="ilizi">
+        <div class="box">
+            <div class="box_1">
+                <div class="userCenterBox">
+                    <h5>
+                        <spna>個人資料</spna>
+                    </h5>
+                    <form name="formEdit" action="" method="post" onsubmit="return userEdit()">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td width="28%" align="right" bgcolor="#ffffff">會員號：</td>
+                                    <td width="72%" align="left" bgcolor="#ffffff" th:text=${userid} name="id_no" ></td>
+                                </tr>
+                                <tr>
+                                    <td width="28%" align="right" bgcolor="#ffffff">出生日期：</td>
+                                    <td width="72%" align="left" bgcolor="#ffffff"  >
+                                        <input class="datess" type="date" name="birthday" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="28%" align="right" bgcolor="#ffffff">性 別：</td>
+                                    <td width="72%" align="left" bgcolor="#ffffff"  >
+                                        <input class="sex" type="radio" name="sex" value="0" checked="checked">保密
+                                        <input class="sex" type="radio" name="sex" value="1">男
+                                        <input class="sex" type="radio" name="sex" value="2">女
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="28%" align="right" bgcolor="#ffffff">手機：</td>
+                                    <td width="72%" align="left" bgcolor="#ffffff"  name="usermobile" >
+                                        <input name="mobilephone" type="text" class="inputBg" th:value=${usermobile} readonly="" unselectable="on">
+                                        <span>不可編輯</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center" bgcolor="#FFFFFF">
+                                        <input name="submit" type="hidden" value="edit_profile">
+                                        <input name="submit" type="submit" value="確認修改" class="btn-primary"  width="100%">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

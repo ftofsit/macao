@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/header/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/user.css}" rel="stylesheet"/>
+</head>
+<body>
+<!--header-->
+<div class="title" th:include="title::title"></div>
+<!--header end-->
+
+<!--content 找回密碼-->
+<div class="container retrievepw"  >
+    <div class="reg_main ">
+        <div class="user-retrievepw-name">
+            <font class="iconfont"></font>
+            <font class="retrievepw-name">修改密碼</font>
+        </div>
+        <div class="user-retrieve-panel">
+            <form name="change" action="/user"  method="post" onsubmit="return changePassword()">
+                <ul>
+                    <li class="input-pw">
+                        <input class="new-pw" name="new-pw" type="password" placeholder="密碼" maxlength="30" oninput="inputpw()" >
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="new-pw_notice"></li>
+                    <li class="change-pw">
+                        <input class="confirm-pw" name="confirm-pw" type="password" placeholder="密碼確認" maxlength="30" oninput="checkpw()" >
+                        <span class="error_icon"></span>
+                    </li>
+                    <li class="error_box" id="confirm-pw_notice"></li>
+                    <li class="change-pw-submit">
+                        <input type="hidden" name="act" value="act_change">
+                        <input type="submit" name="change_submit" class="change_submit" value="提 交">
+                    </li>
+                    <li class="error_box"></li>
+                    <li class="return-page">
+                        <input type="submit" name="return_submit" class="return_submit" value="返回上一頁">
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<!--content 找回密碼end-->
+
+
+<div  class="text-center" th:include="footer :: copyright"></div>
+<script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/jquery/user.js}"></script>
+</body>
+</html>

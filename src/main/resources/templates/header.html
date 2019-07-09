@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/header/css/header.css}" rel="stylesheet"/>
+</head>
+<body>
+<div th:fragment="header">
+    <div class="navbar navbar-default " style="margin-bottom:0px">
+        <div class="container">
+            <div class="navbar-header" style="float:right">
+                <a class="navbar-brand" href="#" style="font-size: 13px"> 用戶登錄</a>
+                <a class="navbar-brand" href="#" style="font-size: 13px"> 用戶註冊</a>
+
+                <div class="btn-group navbar-brand">
+                    <a class="dropdown-toggle button-style" type="button" data-toggle="dropdown"  href="#" style="font-size: 13px;margin-left:0px;height:auto" > 用戶信息</a>
+                    <ul class="dropdown-menu " role="menu" style="text-align: left;margin:1px 0px;">
+                        <li><a href="#">功能</a></li>
+                        <li><a href="#">另一个功能</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-xs-4 col-sm-4">
+        <a class="navbar-brand banner-icon" href="#" >
+            <img th:src="@{/images/logo.gif}" class="img-responsive center-block" style="max-width:initial;width: 100%">
+        </a>
+        </div>
+        <div  class="col-xs-4 col-sm-4">
+        </div>
+        <div  class="col-xs-2 col-sm-2">
+        </div>
+        <div class="btn-group navbar-brand col-xs-2 col-sm-2" role="group" style="margin-top:1vh">
+                <a class="navbar-brand dropdown-toggle shipping-cart" type="button" data-toggle="dropdown"  href="#" > 用戶信息</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">Dropdown link</a></li>
+                </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

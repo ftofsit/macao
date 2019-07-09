@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <!--<meta content="text/html;charset=UTF-8"/>-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/css/usermessage.css}" rel="stylesheet"/>-->
+</head>
+<body>
+<div class="my_nala_centre"  th:fragment="userphone">
+    <div class="ilizi">
+        <div class="box">
+            <div class="box_1">
+                <div class="phone">
+                    <h5>
+                        <span>綁定手機</span>
+                    </h5>
+                    <div class="box">
+                        <form name="formmobile" action="" method="post" onsubmit="return bindmobile()">
+                            <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+                                <tbody>
+                                    <tr>
+                                        <td width="28%" align="right" bgcolor="#ffffff">手機號：</td>
+                                        <td width="76" align="left" bgcolor="#ffffff">
+                                            <input id="mobile" name="mobile" type="text" size="20" class="inputBg"  maxlength="12">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="28%" align="right" bgcolor="#ffffff">驗證碼：</td>
+                                        <td align="left" bgcolor="#ffffff">
+                                            <input id="verifycode" name="verifycode" type="text" size="20" class="codeinput" >
+                                            <span style="color:#ff0000">
+                                                <input type="button" id="getphone" value="獲取驗證碼">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center" bgcolor="#ffffff" >
+                                            <input type="hidden" value="bindmobile">
+                                            <input name="submit" type="submit" class="btn-primary" value="確認修改">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

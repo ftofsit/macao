@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/header/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/goods.css}" rel="stylesheet"/>
+</head>
+<body>
+<!--header-->
+<div class="title" th:include="title::title"></div>
+<!--header end-->
+<!--content-->
+<div class="container goods_whole">
+    <div class="goods_content" >
+        <!--活動圖片區域-->
+        <div class="col-xs-8 col-sm-8" style="padding-left: 0px;">
+            <div class="page-header" style="border-bottom: 0px">
+                <h3 th:text=${goods_name} ></h3>
+                <a th:text=${goods_basic} ></a>
+            </div>
+            <div style="display: inline-block;width:50%;float: left">
+                <div class="box" style="display: inline;">
+                    <div class="tb-booth tb-pic tb-s310">
+                        <a th:href=${goods_img}><img th:src=${goods_img}  th:alt=${goods_name} th:rel=${goods_img} class="jqzoom" /></a>
+                    </div>
+                    <ul class="tb-thumb" id="thumblist" style="display: none">
+                        <li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img th:src=${goods_img}  th:mid=${goods_img} th:big=${goods_img} ></a></div></li>
+                    </ul>
+                </div>
+            </div>
+            <from action="" methob="post" name="goods_buy" class="goods_buy">
+                <div id="wrap" style="float: left;width:50%;">
+                    <div id="top">
+                        <p id="model"> <font th:text=${goods_model}></font>
+                            <span class="on"  th:id=${goods_attr1} th:text=${goods_num}></span>
+                            <span   th:id=${goods_attr1} th:text=${goods_num}></span>
+                            <span   th:id=${goods_attr1} th:text=${goods_num}></span>
+                        </p>
+                        <p id="color"> <font th:text=${goods_model}></font>
+                            <span class="on" th:id=${goods_attr1} th:text=${goods_num}  ></span>
+                            <span   th:id=${goods_attr1} th:text=${goods_num}></span>
+                            <span  th:id=${goods_attr1}  th:text=${goods_num}></span>
+                        </p>
+                        <p id="rom"> <font th:text=${goods_model}></font>
+                            <span class="on" th:text=${goods_num} th:id=${goods_attr1}></span>
+                            <span  th:text=${goods_num} th:id=${goods_attr2}></span>
+                            <span  th:text=${goods_num} th:id=${goods_attr3} ></span>
+                        </p>
+                        <p id="num">
+                            <font style="margin-right:1px;">數量：</font>
+                            <font id="selectnum">
+                                <input id="min" name="" type="button" value="-" />
+                                <input id="quantity" name="" type="text" value="1" oninput="input_price()" />
+                                <input id="add" name="" type="button" value="+" />
+                            </font>
+                        </p>
+                        <P id="goods_total">
+                            <font th:text=${goods_total}></font>
+                            <a id="price_Symbol">$</a>
+                            <a id="price" th:text=${goods_num}></a>
+                        </P>
+                    </div>
+                    <div id="goods_add_cart">
+                        <button  type="button" id="btn-scs">立即購買</button>
+                    </div>
+                </div>
+            </from>
+        </div>
+        <!--活動圖片區域 end-->
+        <div class="col-xs-1 col-sm-1"></div>
+        <div class="col-xs-3 col-sm-3">
+            <div class="functionmap" style="border-bottom: 0px">
+                <h3 th:text=${function_list} ></h3>
+                <div class="collection-button">
+                    <img id="scimg" src="/images/ico_star.png" onclick="add_collection()">
+                    <div class="text">想看</div>
+                </div>
+                <img  th:src=${function_list_url}  data-toggle="modal" data-target="#myModal" >
+            </div>
+        </div>
+    </div>
+    <div class="goods_details">
+        <div class="col-xs-8 col-sm-8" style="padding-left:0px;padding-bottom:2vh">
+            <div class="itemContent">
+                <ul class="itemContenthead nav navbar-nav" >
+                    <li ><a href="#goods_activity">活動介紹</a></li>
+                    <li ><a href="#goods_review">活動評論</a></li>
+                    <li ><a href="#goods_tip">溫馨提示</a></li>
+                </ul>
+            </div>
+            <div class="goods_info" data-spy="scroll" data-target="#navbar-example" data-offset="0" >
+                <div class="sectionbox" id="goods_activity" >
+                    <h4>
+                        <span class="vline"></span>
+                        <span class="txt">活動簡介</span>
+                        <span class="line"></span>
+                    </h4>
+                    <div >
+                        <a th:text=${goods_activity}></a>
+                    </div>
+                </div>
+                <div class="goods_review" id="goods_review">
+                    <h4>
+                        <span class="vline"></span>
+                        <span class="txt">用戶評價</span>
+                        <span class="line"></span>
+                    </h4>
+                    <div class="goods_leave">
+                        <table class="table">
+                            <caption>全部評價（0）</caption>
+                            <tbody>
+                                <tr th:each="leave: ${message}">
+                                    <td>
+                                        <div>
+                                            <a class="leaves_name" th:text="${leave.name}"></a>
+                                            <img class="leaves_img" th:src="${leave.userimg}">
+                                            <a class="leaves_day" th:text="${leave.day}"></a>
+                                            <p class="leaves_title_p">
+                                                <a class="leaves_title" th:text="${leave.title}"></a>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="goods_tip" id="goods_tip">
+                    <h4>
+                        <span class="vline"></span>
+                        <span class="txt">溫馨提示</span>
+                        <span class="line"></span>
+                    </h4>
+                    <div class="act_tip">
+                        <ul>
+                            <li>
+                                <div class="tt" th:text=${tip_tt}></div>
+                                <div class="dd" th:text=${tip_dd}></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <div class="itemContent">
+                <ul class="itemContenthead nav navbar-nav" >
+                    <li ><a style="background-color:#fff">精品推薦</a></li>
+                </ul>
+            </div>
+            <div class="recommend">
+                <ul>
+                    <li th:each="recomm:${recommend}">
+                        <a th:href="${recomm.goods_url}" class="recommend_img"><img th:src="${recomm.goods_img}"> </a>
+                        <div class="recommend_info">
+                            <a class="recommend_name" th:text="${recomm.goods_name}"></a>
+                            <div class="recommend_time" th:text="${recomm.goods_time}"></div>
+                            <div class="recommend_addr" th:text="${recomm.goods_addr}"></div>
+                            <div class="recommend_price" th:text="${recomm.goods_price}"> </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--content end-->
+
+
+<!--圖片遮罩層-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="showimg modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <img th:src=${function_list_url} style="width:30vw;height: 50vh">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--圖片遮罩層end-->
+
+<!--滾動導航欄-->
+<div class="scroll-nav" >
+    <div class="container" >
+        <div class="col-xs-3 col-sm-3 info"  >
+            <img class="nav-img" th:src=${goods_img}>
+            <a class="nav-name" th:text=${goods_name}></a>
+        </div>
+        <div class="col-xs-7 col-sm-7 itemContentHead">
+            <li><a href="#goods_activity">活動介紹</a></li>
+            <li><a href="#goods_review">活動評論</a></li>
+            <li><a href="#goods_tip">溫馨提示</a></li>
+        </div>
+        <div class="col-xs-2 col-sm-2">
+            <button class="add_cart">加入購物車</button>
+        </div>
+    </div>
+</div>
+<!--滾動導航欄 end-->
+
+</body>
+<script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/jquery/imagezoom.min.js}"></script>
+<script th:src="@{/jquery/goods.js}"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $(".jqzoom").imagezoom();
+
+        $("#thumblist li a").click(function(){
+            $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+            $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+            $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+        });
+
+    });
+</script>
+</html>

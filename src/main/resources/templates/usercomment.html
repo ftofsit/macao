@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <!--<meta content="text/html;charset=UTF-8"/>-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>-->
+    <!--<link th:href="@{/css/usermessage.css}" rel="stylesheet"/>-->
+</head>
+<body>
+<div class="my_nala_centre"  th:fragment="usercomment">
+    <div class="ilizi">
+        <div class="box">
+            <div class="box_1">
+                <div class="comment">
+                    <h5>
+                        <spna>我的評論</spna>
+                    </h5>
+                    <div class="message-box">
+                        <table>
+                            <tbody>
+                                <tr th:each="content:${content}">
+                                    <td>
+                                        <div class="frame">
+                                            <div class="message-tip" >
+                                                <b th:text=${tip} ></b>
+                                                <h3 th:text=${content.name} ></h3>
+                                                <span class="msg_time" th:text=${content.time} ></span>
+                                            </div>
+                                            <div class="message-content" th:text=${content.content}></div>
+                                        </div>
+                                    </td>
+                                    <td align="right">
+                                        <a  onclick="if (!confirm('你確實要徹底刪除這條留言嗎？ ')) return false;" class="delcomment">刪除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

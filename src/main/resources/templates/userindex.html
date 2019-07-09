@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<!--<meta content="text/html;charset=UTF-8"/>-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1"/>-->
+<!--<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
+<!--<link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>-->
+<!--<link th:href="@{/css/usermessage.css}" rel="stylesheet"/>-->
+</head>
+<body>
+<div class="my_nala_centre"  th:fragment="userindex">
+    <div class="ilizi">
+        <div class="box">
+            <div class="box_1">
+                <div class="userCenterBox">
+                    <div class="portal-main">
+                        <div class="clearfix">
+                            <div class="user-card">
+                                <h2 class="username" th:text=${user_name}></h2>
+                                <p class="tip" th:text=${user_title}></p>
+                                <a class="link" id="userinfo" onclick="open2(this);">修改個人資料</a>
+                                <a class="line" name="useravatar" onclick="open1(this)">修改頭像</a>
+                                <img class="avatar" th:src=${img_code}>
+                            </div>
+                            <div class="user-actions">
+                                <ul class="action-list">
+                                    <li th:text=${login_time}></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portal-sub">
+                        <ul class="info-list">
+                            <li>
+                                <h3>紅包：<span class="num" th:text="${user_bonus}" ></span></h3>
+                                <a class="bonux_txt" id="userbonus" onclick="open4(this)"> 查看您的賬戶紅包 </a>
+                                <img src="/images/portal-icon-1.png">
+                            </li>
+                            <li>
+                                <h3>手機：
+                                    <span th:if="${user_name} == ${last_name} " >已綁定</span>
+                                    <span th:if="${user_name} == ${secon_ame}  ">未綁定</span>
+                                </h3>
+                                <a class="bonux_txt" th:if="${ user_name == last_name }" id="userphone" onclick="open3(this)"> 重新綁定 </a>
+                                <a class="bonux_txt" th:if="${ user_name == secon_ame }" href=${pwd_url}> 點擊綁定 </a>
+                                <img src="/images/ico-phone.png">
+                            </li>
+                            <li>
+                                <h3>
+                                    用戶提醒：
+                                    <span class="num" th:text=${user_tip}></span>
+                                </h3>
+                                <img src="/images/portal-icon-4.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

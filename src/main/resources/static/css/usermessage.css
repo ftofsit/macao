@@ -1,0 +1,703 @@
+/*個人中心css*/
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+.usercontent{
+    float: right;
+    width: 870px;
+    background-color: #fff;
+    padding: 0 0 20px 0;
+}
+.usercontent .userCenterBox .portal-main{
+    padding-top: 24px;
+}
+.userCenterBox .portal-main .user-card{
+    text-align: left;
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 160px;
+    padding-left: 180px;
+    padding-top: 40px;
+}
+.userCenterBox .portal-main .user-card .username{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #CCA866;
+}
+.userCenterBox .portal-main .user-card .tip{
+    margin: 0 0 10px;
+    color: #B0B0B0;
+}
+.userCenterBox .portal-main .user-card .link{
+    padding: 5px 10px;
+    display: -webkit-inline-box;
+    background: #CCA866;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.userCenterBox .portal-main .user-card .line{
+    margin-left: 20px;
+    padding: 5px 10px;
+    display: -webkit-inline-box;
+    background: #CCA866;
+    border-radius: 15px;
+    color: #fff;
+}
+.userCenterBox .portal-main .user-card a:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+.userCenterBox .portal-main .user-card .avatar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 4px;
+    border: 1px solid #E0E0E0;
+    border-radius: 150px;
+    width: 150px;
+    height: 150px;
+}
+.userCenterBox .portal-main .user-actions{
+    float: right;
+    width: 300px;
+    margin-top: 35px;
+}
+.userCenterBox .portal-main .user-actions .action-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #757575;
+}
+.userCenterBox .portal-main .user-actions .action-list li{
+    position: relative;
+    padding: 6px 0;
+    text-align: center;
+}
+.userCenterBox .portal-sub{
+    border-top: 1px solid #E0E0E0;
+}
+.userCenterBox .portal-sub .info-list{
+    margin: 0;
+    padding: 60px 0 0;
+    list-style-type: none;
+    color: #757575;
+}
+.userCenterBox .portal-sub .info-list li{
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 65px;
+    padding-left: 112px;
+    padding-top: 15px;
+    margin-left: 14px;
+    margin-bottom: 80px;
+    text-align: left;
+}
+.userCenterBox .portal-sub .info-list li h3{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.userCenterBox .portal-sub .info-list li h3 .num{
+    color: #FF6700;
+    font-size: 14px;
+}
+.userCenterBox .portal-sub .info-list li a{
+    padding: 5px 10px;
+    display: -webkit-inline-box;
+    background: #CCA866;
+    border-radius: 15px;
+    color: #fff;
+    text-decoration:none;
+}
+.userCenterBox .portal-sub .info-list li img{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+/*用戶信息css*/
+.ilizi .box .box_1 .userCenterBox h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.userCenterBox form table{
+    margin: 5px 0 30px 0;
+    width: 100%;
+}
+.userCenterBox form table td{
+    border: 3px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+}
+.userCenterBox form table .btn-primary{
+    background-color: #ff6700;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+    width: 158px;
+    background-image: none;
+    border: none;
+}
+
+/*我的收藏css*/
+.ilizi .box .box_1 .collection h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.collection form table{
+    margin: 5px 0 30px 0;
+    width: 100%;
+}
+.collection table tbody tr th{
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.collection form table td{
+    border: 3px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+}
+.collection form ul li{
+    list-style: none;
+}
+
+/*我的評論css*/
+.ilizi .box .box_1 .comment h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.comment table{
+    width: 100%;
+}
+.comment table tr .frame{
+    margin:1rem 0px 1rem 0px
+}
+.comment table tr td{
+    border-bottom: 1px solid #e0e0e0;
+}
+.comment .message-tip{
+    width: 70%;
+}
+.comment .message-tip b{
+    display: inline-block;
+    padding: 0 4px;
+    background: #C3625D;
+    color: #fff;
+    margin-right: 10px;
+    float:left;
+}
+.comment .message-tip h3{
+    font-size: 16px;
+    float:left;
+    margin:0px;
+}
+.comment .message-tip .msg_time{
+    color: #f60;
+    font-size: 12px;
+    margin-left:1rem;
+}
+.message-box .message-content {
+    padding: 10px 45px;
+    font-size: 16px;
+    text-align: left;
+}
+.message-box .delcomment{
+    color:#C3625D;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+/*我的紅包css*/
+.ilizi .box .box_1 .bonus h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.bonus tr th{
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.bonus tr td{
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*我的活動css*/
+.ilizi .box .box_1 .info a{
+    text-decoration:none;
+    cursor:pointer;
+}
+.ilizi .box .box_1 .info h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.info .info-mess div{
+    border-bottom: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+    color: #333333;
+    height: 33px;
+    text-align: center;
+    background: #eee;
+    padding: 0;
+    border-left: 2px solid #E6E6E6;
+    float: left;
+    line-height: 33px;
+}
+.info .order-hd{
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    padding: 8px 5px;
+    border: #E6E6E6 solid 1px;
+    background: #F5F5F5;
+    border-top: none;
+}
+.info .order-message{
+    display: flex;
+    border: #E6E6E6 solid 1px;
+}
+.info .order-hd .goodstt{
+    margin-left:1rem;
+}
+
+.info .order-status .order-hd td{
+    overflow: hidden;
+    padding: 8px 5px;
+    border: #E6E6E6 solid 1px;
+    background: #F5F5F5;
+    border-top: none;
+    text-align: left;
+    font-size: 14px;
+}
+.info .order-bd td{
+    padding: 8px 5px;
+    border: #E6E6E6 solid 1px;
+    border-top: none;
+}
+.info .goods_desc{
+    clear: both;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    height: 60px;
+
+}
+.info .goods_desc a{
+    border: 1px solid #E9E9E9;
+    margin-right: 10px;
+    float: left;
+    height: 52px;
+    width: 52px;
+}
+.info .goods_desc a img{
+    height: 50px;
+    width: 50px;
+}
+.info .goods_desc .goods_name{
+    float: left;
+}
+.info .info-mess .goods_eva{
+    clear: both;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    height: 60px;
+}
+.info .info-mess .goods_eva a{
+    top: 10px;
+    position: relative;
+    padding: 3px 8px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #CCA866;
+}
+.info .order-message .goods_num{
+    padding:5px 0px;
+}
+.info .order-message .goods_eva{
+    padding:10px 0px;
+}
+.info .order-message .goods_price{
+    padding:5px 0px;
+}
+.info .order-message .goods_status a{
+    padding:5px 0px;
+    display: flex;
+}
+.info .order-message .order font{
+    padding:5px 0px;
+    display:inline-block;
+}
+.ilizi .box .box_1 .info .goods_eva a{
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #CCA866;
+}
+.ilizi .box .box_1 .info .order-message .goods_status a{
+    color: #000000;
+    cursor:default;
+}
+
+
+#overlay{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(51, 51, 51);
+    opacity: 0.6;
+    z-index: 9999;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+#easyDialogbox{
+    padding: 0px;
+    border: none;
+    z-index: 10000;
+    position: fixed;
+    top: 30%;
+    left: 31%;
+    display: none;
+}
+#commentFrom{
+    padding: 20px 35px;
+    width: 700px;
+    border-radius: 10px;
+    margin: 0px;
+    background: #fff;
+    border: 3px solid #CD0606;
+    position: relative;
+}
+.comment-close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+#easyDialogbox li{
+    list-style: none;
+}
+ #easyDialogbox #commentFrom .btn{
+    border:none;
+    height:40px;
+    cursor:pointer;
+    width:150px;
+    font-size:16px;
+}
+#addr-form{
+    padding:0px;
+}
+#addr-form li{
+    text-align: left;
+}
+#addr-form li label {
+    display: inline-block;
+    width: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 12px;
+}
+#commentFrom form li{
+    padding-bottom:12px;
+    text-align: left;
+}
+#commentFrom form input{
+    font-size: 12px;
+    outline: 0;
+    resize: none;
+    color: #333;
+    vertical-align: middle;
+    margin:0px;
+}
+#commentFrom form li textarea.txt{
+    width: 150px;
+    padding: 8px;
+    height: 16px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    border-top-color: #ccc;
+    margin-right: 8px;
+    box-shadow: 0 1px 3px rgba(200,200,200,0.3) inset;
+    color: #333;
+    vertical-align: middle;
+}
+#commentFrom form li input.txt{
+    width: 150px;
+    padding: 8px;
+    height: 30px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    border-top-color: #ccc;
+    margin-right: 8px;
+    box-shadow: 0 1px 3px rgba(200,200,200,0.3) inset;
+    color: #333;
+    vertical-align: middle;
+}
+.btn:hover,.btn-css3:hover {
+    text-decoration:none;
+    color:#fff;
+}
+.btn{
+    display: inline-block;
+    padding: 5px 12px;
+    height: 16px;
+    line-height: 16px;
+    _line-height: 18px;
+    /* border: 1px solid #605046; */
+    border-radius: 3px;
+    font-size: 100%;
+    color: #fff;
+    background-color: #CCA866;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/*售後列表css*/
+.ilizi .box .box_1 .sales h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.sales tr th{
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.sales tr td{
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+     text-align: center;
+
+}
+.sales tr td a{
+    text-decoration:none
+}
+.sales tr td a:hover{
+   color:#CCA866;
+}
+
+
+/*活動統計*/
+.ilizi .box .box_1 .actnum{
+    text-align: left;
+}
+.ilizi .box .box_1 .actnum h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.ilizi .box .box_1 .actnum select{
+    height: 25px;
+    width: 100px;
+    line-height: 30px;
+}
+.ilizi .box .box_1 .actnum input{
+    margin-left: 3px;
+    width: 60px;
+    height: 25px;
+    font-size: 12px;
+    outline: 0;
+    resize: none;
+    color: #333;
+    line-height: 20px;
+    position: absolute;
+}
+.ilizi .box .box_1 .actnum table{
+    margin-top:1rem;
+}
+.ilizi .box .box_1 .actnum table th{
+    border: 3px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*會員頭像*/
+.ilizi .box .box_1 .avatar h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.avatar .modify .ncm-default-form dl{
+    line-height: 20px;
+    clear: both;
+    padding: 0;
+    margin: 0;
+    border-bottom: dotted 1px #E6E6E6;
+    overflow: hidden;
+}
+.ncm-default-form dt{
+    font-size: 12px;
+    line-height: 32px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: right;
+    display: inline-block;
+    width: 24%;
+    padding: 10px 2% 10px 0;
+    margin: 0;
+    float: left;
+}
+.ncm-default-form dl dd{
+    text-align: left;
+    width: 74%;
+    padding: 10px 0 10px 0;
+    float: left;
+}
+.ncm-default-form dl dd .user-avatar img{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+.ncm-default-form .avatar-tip{
+    height: 50px;
+    color: #AAA;
+    clear: both;
+}
+.ncm-default-form .ncm-upload-btn .upload-btn{
+    padding: 3px 15px;
+    border-radius: 15px;
+    border: 1px;
+    cursor: pointer;
+    color:#333;
+}
+.ncm-default-form .submit-border .btn-primary{
+    background: #ff6700;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+    width: 158px;
+
+}
+
+
+
+/*綁定手機*/
+.ilizi .box .box_1 .phone h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #ff6700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: solid 5px #ff6700;
+    text-indent: 15px;
+    text-align: left;
+}
+.ilizi .box .box_1 .phone table tr td{
+    border: 2px solid #e0e0e0;
+    padding: 10px;
+    font-size: 14px;
+}
+.ilizi .box .box_1 .phone table tr td .btn-primary{
+    color: #fff;
+    font-size: 14px;
+    height: 38px;
+    width: 158px;
+    border-color:#ff6700;
+    background-color:#ff6700;
+    background-image:none;
+    border-radius: 15px;
+}
