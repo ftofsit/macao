@@ -128,8 +128,9 @@ public class UserController {
     }
 
     @RequestMapping("/userdetail")
-    //用戶退款
+    //用戶清單詳情
     public String userdetail(Model model) {
+        model.addAttribute("goods_num", "222");
         model.addAttribute("act_time", "2019011291898");
         model.addAttribute("act_state", "已確認");
         model.addAttribute("pay_state", "未付款");

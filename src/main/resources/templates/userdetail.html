@@ -14,26 +14,26 @@
                         <tbody>
                             <tr>
                                 <td width="15%" align="right" bgcolor="#ffffff">活動號：</td>
-                                <td align="left" bgcolor="#ffffff" th:text=${act_time}></td>
+                                <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${act_time}></td>
                             </tr>
                             <tr>
                                 <td align="right" bgcolor="#ffffff">活動狀態：</td>
-                                <td align="left" bgcolor="#ffffff" th:text=${act_state}></td>
+                                <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${act_state}></td>
                             </tr>
                             <tr>
                                 <td align="right" bgcolor="#ffffff">付款狀態：</td>
-                                <td align="left" bgcolor="#ffffff" th:text=${pay_state}></td>
+                                <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${pay_state}></td>
                             </tr>
                             <tr>
                                 <td align="right" bgcolor="#ffffff">取票狀態：</td>
-                                <td align="left" bgcolor="#ffffff" th:text=${ticket_state}></td>
+                                <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${ticket_state}></td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="blank"></div>
                     <h5>
                         <span>活動列表</span>
-                        <a onclick="returntocart()" class="returncart">放回購票中心</a>
+                        <a onclick="returntocart(this)" class="returncart" th:id=${goods_num}>放回購票中心</a>
                     </h5>
 
                     <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
@@ -41,15 +41,15 @@
                             <tr>
                                 <th width="23%" align="center" bgcolor="#ffffff">活動名稱</th>
                                 <th width="29%" align="center" bgcolor="#ffffff">屬性</th>
-                                <th width="26%" align="center" bgcolor="#ffffff">活動價格</th>
-                                <th width="9%" align="center" bgcolor="#ffffff">購買數量</th>
+                                <th width="13%" align="center" bgcolor="#ffffff">活動價格</th>
+                                <th width="15%" align="center" bgcolor="#ffffff">購買數量</th>
                                 <th width="20%" align="center" bgcolor="#ffffff">小計</th>
                             </tr>
                             <tr>
                                 <td bgcolor="#ffffff" style="text-align: center">
-                                    <a href="http://localhost:8080/test/goods" target="_blank" th:text=${act_name}></a>
+                                    <a href="http://localhost:8080/test/goods" target="_blank"  th:text=${act_name}></a>
                                 </td>
-                                <td align="left" bgcolor="#ffffff" style="text-align: center"  th:text=${act_att}>
+                                <td align="left" bgcolor="#ffffff"   th:text=${act_att}>
                                 </td>
                                 <td bgcolor="#ffffff">
                                     <font th:text=${act_price}></font>
@@ -60,10 +60,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="8" bgcolor="#ffffff" align="right">-使用紅包：<font th:text=${red_packet}></font></td>
+                                <td colspan="8" bgcolor="#ffffff" style="text-align: right" >-  使用紅包：<font th:text=${red_packet}></font></td>
                             </tr>
                             <tr>
-                                <td colspan="8" bgcolor="#ffffff" align="right">應付款金額：<font th:text=${total_amount}></font></td>
+                                <td colspan="8" bgcolor="#ffffff" style="text-align: right" >應付款金額：<font th:text=${total_amount}></font></td>
                             </tr>
                         </tbody>
                     </table>
@@ -73,8 +73,8 @@
                     <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
                         <tbody>
                             <tr>
-                                <td bgcolor="#ffffff">
-                                   所選支付方式：<a th:text=${pay_method}></a>，應付款金額：<strong><font th:text=${total_amount}></font></strong>
+                                <td bgcolor="#ffffff" style="text-align: right">
+                                   所選支付方式：<a style="color:#000000;cursor:default;" th:text=${pay_method}></a>，應付款金額：<strong><font th:text=${total_amount}></font></strong>
                                 </td>
                             </tr>
                         </tbody>
