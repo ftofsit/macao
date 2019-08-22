@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/header/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/search.css}" rel="stylesheet"/>
+</head>
+<body>
+<!--header-->
+    <div th:include="header :: header" style="border-bottom:1px solid #ccc"></div>
+<!--header end-->
+
+<!--message-->
+    <div class="search_page">
+        <div class="search_list">
+            <div class="panel search_ms" th:if=" ${content} eq 1">
+                 <div class="panel-title text-center">
+                     <img src="/images/search-img.jpg">
+                 </div>
+                <div class="panel-body text-center">
+                    <a class="no-content"> 暫無記錄...</a>
+                </div>
+            </div>
+            <div class="panel search_ms" th:if=" ${content} eq 0">
+
+            </div>
+        </div>
+    </div>
+<!--message end-->
+
+<!--footer-->
+    <div th:include="footer :: footer" class="text-center" ></div>
+<!--footer end-->
+</body>
+</html>

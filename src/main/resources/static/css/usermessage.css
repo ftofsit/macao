@@ -703,7 +703,7 @@ a:hover{
 }
 
 /*產品詳情*/
-.ilizi .box .box_1 h5{
+.details_act .ilizi .box .box_1 h5{
     margin: 0;
     font-size: 16px;
     font-weight: 600;
@@ -715,19 +715,18 @@ a:hover{
     text-indent: 15px;
     text-align: left;
 }
-.ilizi .box .box_1 table tbody tr th{
+.details_act .ilizi .box .box_1 table tbody tr th{
     border: 3px solid #e0e0e0;
     padding: 10px;
     font-size: 14px;
     text-align: center;
 }
-.ilizi .box .box_1 table tbody tr td{
+.details_act .ilizi .box .box_1 table tbody tr td{
     border: 3px solid #e0e0e0;
     padding: 10px;
     font-size: 14px;
-    text-align: center;
 }
-.ilizi .box .box_1 h5 .returncart{
+.details_act .ilizi .box .box_1 h5 .returncart{
     text-indent: 0px;
     padding: 3px 15px;
     background-color: #ff6700;
