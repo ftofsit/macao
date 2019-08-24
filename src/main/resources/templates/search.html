@@ -16,7 +16,7 @@
 <!--message-->
     <div class="search_page">
         <div class="search_list">
-            <div class="panel search_ms" th:if=" ${content} eq 1">
+            <div class="search_ms" th:if=" ${content} eq 1">
                  <div class="panel-title text-center">
                      <img src="/images/search-img.jpg">
                  </div>
@@ -24,8 +24,64 @@
                     <a class="no-content"> 暫無記錄...</a>
                 </div>
             </div>
-            <div class="panel search_ms" th:if=" ${content} eq 0">
+            <div class="search_ms" th:if=" ${content} eq 0">
+                <div class="panel-title ">
+                    <div class="col-sm-2 col-md-2 col-cs-2"></div>
+                    <div class="col-sm-6 col-md-6 col-cs-6">
+                        <div class="titles">
+                            <h1><span th:text="${searchname}"></span> <small>相關的活動</small></h1>
+                        </div>
+                        <div class="block">
+                            <div class="search_detail">
+                                <table>
+                                    <tbody>
+                                        <tr class="detail_news" th:each="goods:${goods}">
+                                            <td>
+                                               <img th:src=${goods.goods_img}>
+                                            </td>
+                                            <td style="margin-left:2rem">
+                                                <div class="goods_name" th:text=${goods.goods_name}></div>
+                                                <div>時間：<a th:text=${goods.goods_time}></a></div>
+                                                <div>地點：<a th:text=${goods.goods_site}></a></div>
+                                                <div>費用：<a th:text=${goods.goods_price}></a></div>
+                                                <p class="counts">
+                                                    <span><a th:text=${goods.goods_join}></a>參加</span>
+                                                    <span class="pipe"></span>
+                                                    <span><a th:text=${goods.goods_hobby}></a>感興趣</span>
+                                                </p>
 
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-cs-2">
+                        <div class="titles">
+                            <h1>優選活動推薦</h1>
+                        </div>
+                        <div class="ranklist">
+                            <div class="search_detail">
+                                <table>
+                                    <tbody>
+                                    <tr class="detail_news" th:each="goods:${goods}">
+                                        <td>
+                                            <img th:src=${goods.goods_img}>
+                                        </td>
+                                        <td style="margin-left:2rem">
+                                            <div class="goods_name" th:text=${goods.goods_name}></div>
+                                            <p class="time" th:text=${goods.goods_time}></p>
+                                            <p class="price" th:text=${goods.goods_price}></p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-cs-2"></div>
+                </div>
             </div>
         </div>
     </div>

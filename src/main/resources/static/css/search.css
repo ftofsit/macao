@@ -1,10 +1,14 @@
 /*搜索首頁css*/
+a{
+    color:#666;
+    font-size: 14px;
+}
 a:hover{
     cursor: pointer;
     text-decoration: none;
 }
 .search_page{
-    margin-top:5rem;
+    margin-top:1rem;
 }
 .search_page .panel-title img{
     vertical-align: middle;
@@ -15,4 +19,70 @@ a:hover{
     padding-top: 30px;
     color: #000000;
 }
+.search_page .panel-title .block .search_detail .detail_news td{
+    display: inline-block;
+    margin: 1rem 0;
+}
+/*搜索頁面左側區域*/
+.search_page .panel-title .block .search_detail .detail_news img{
+    width:150px;
+    height: 150px;
+}
+.search_page .panel-title .block .search_detail .goods_name{
+    color: #37a;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
+.search_page .panel-title .block .search_detail .counts{
+    background: #f5f5f5;
+    display: inline-block;
+    padding: 3px 10px 2px;
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
+}
+.search_page .panel-title .block .search_detail .counts span{
+    font-size:14px;
+}
+.search_page .panel-title .block .search_detail .pipe{
+    width: 1px;
+    background: #ccc;
+    height: 0.9em;
+    margin: 0 4px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.search_page .panel-title .block .search_detail div{
+    color:#666;
+    font-size: 14px;
+}
+/*搜索頁面的右側區域*/
+.search_page .panel-title .ranklist .search_detail .detail_news img{
+    width:70px;
+    height:70px;
+}
+.search_page .panel-title .ranklist .search_detail .goods_name{
+    color:#131844;
+    font-size: 14px;
+    height: 1.5em;
+    margin: 1px 0 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.search_page .panel-title .ranklist .search_detail .time{
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 10px;
+}
+.search_page .panel-title .ranklist .search_detail .price{
+    color: #ff8263;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
