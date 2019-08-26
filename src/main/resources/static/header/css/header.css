@@ -1,3 +1,4 @@
+/*header css*/
 .banner-icon{
     height:100%;
     padding:15px 0px;
@@ -106,4 +107,37 @@
     margin-right: 1px;
     cursor: pointer;
     background-color:#131844;
+}
+/*footer css*/
+.footer-block{
+    background: #f6f6f6;
+    font-size: 14px;
+    line-height: 1.5em;
+    position: inherit;
+    width: auto;
+}
+.footer-link{
+    display: block;
+    width: 25%;
+    float: left;
+}
+.footer-img{
+    width: 35%;
+    float:left;
+    text-align: right;
+    margin-left:5%;
+}
+.footer-text{
+    width: 55%;
+    float:right;
+    text-align: left;
+}
+.footer-text .message-tip{
+    color:#000;
+    font-weight: bold;
+    font-size: 18px;
+    line-height:2.2rem
+}
+.footer-text .message{
+    color:#605046;
 }

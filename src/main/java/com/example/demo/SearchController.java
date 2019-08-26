@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class search {
+public class SearchController {
     @RequestMapping("/search")
     public String search(Model model) {
         model.addAttribute("content", "1");
