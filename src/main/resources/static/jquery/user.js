@@ -1,3 +1,4 @@
+// 更換註冊頁驗證碼
 $(function() {
     $("#usercode").click(function(){
         console.log($(this).attr("src"));
@@ -5,7 +6,7 @@ $(function() {
     })
 
 })
-
+//打開頁面
 function open1(ob)
 {
    var id=$(ob).attr("name");
@@ -49,6 +50,7 @@ function open4(ob)
     $('.usercontent').load(id);
 }
 
+//活動詳情
 function seedetail(ob)
 {
     var id=$(ob).attr("id");
@@ -61,7 +63,7 @@ function seedetail(ob)
     $('.usercontent').load(id);
 }
 
-
+//用戶名檢查
 function checkusernum(){
     var len = $(".login-id").val();
     if( len.length == 0 ){
@@ -76,6 +78,7 @@ function checkusernum(){
         $("#usernum_notice").text("");
     }
 }
+//用戶密碼檢查
 function checkuserpwd(){
     var len = $(".login-pw").val();
     if( len.length == 0 ){
@@ -90,7 +93,7 @@ function checkuserpwd(){
         $("#userpwd_notice").text("");
     }
 }
-
+//更改密碼code獲取
 function checkcode() {
     var len = $(".login-code").val();
     if( len.length == 0 ){
@@ -105,7 +108,7 @@ function checkcode() {
         $("#usercode_notice").text("");
     }
 }
-
+//檢查用戶登錄
 function userlogin() {
     var user =  document.forms['formlogin'];
     var username = user.elements['login-id'].value;
@@ -144,13 +147,13 @@ function userlogin() {
 
 //判斷手機號格式
 function check(tel){
-    var myreg = /^0?1[3|4|5|6|7|8][0-9]\d{8}$/;
+    var myreg = /^6\d{7}$/;
     if (!myreg.test(tel)) {
         return false;
     }
     return true;
 }
-
+//獲取手機驗證碼
 function getscode(){
     var tel = $(".login-tel").val();
     if( check(tel) ){
@@ -160,6 +163,7 @@ function getscode(){
     }
 
 }
+//檢查手機號
 function checktel(){
     var mobile = $(".login-tel").val();
     if( check(mobile) ){
@@ -170,6 +174,7 @@ function checktel(){
         $(".telnum .error_icon").css("background-position","0 0");
     }
 }
+//檢查code
 function checkcode(){
     var code = $(".vcode").val();
     if ( code == "1234" ){
@@ -180,6 +185,7 @@ function checkcode(){
         $(".sms-code .error_icon").css("background-position","0 0");
     }
 }
+//判斷輸入密碼長度
 function inputpw(){
     var newpw = $(".new-pw").val();
     if( newpw.length >= 6  ){
@@ -190,6 +196,7 @@ function inputpw(){
         $("#new-pw_notice").text("密碼長度不得少於6個字符");
     }
 }
+//判斷更改密碼中的兩次密碼是否重複
 function checkpw(){
     var newpw = $(".new-pw").val();
     var againpw = $(".confirm-pw").val();
@@ -201,6 +208,7 @@ function checkpw(){
         $("#confirm-pw_notice").text("兩次密碼輸入不一致");
     }
 }
+//忘記密碼頁面的數據判斷
 function retrievepw(){
     var change =  document.forms['retrieve'];
     var usertel = change.elements['login-tel'].value;
@@ -242,7 +250,7 @@ function retrievepw(){
         location.href="http://localhost:8080/user?id=resetpwsuccess";
     }
 }
-
+//更改密碼頁面數據判斷
 function changePassword(){
     var change =  document.forms['change'];
     var newpw = change.elements['new-pw'].value;
@@ -285,7 +293,7 @@ function register(){
 
     if ( usertel.length == 0){
         msg += "手機號不能為空" + '\n';
-    }else if(usertel.length < 8){
+    }else if(usertel.length < 6){
         msg += "手機號錯誤" + '\n';
     }
 
@@ -315,7 +323,7 @@ function register(){
         return true;
     }
 }
-
+//判斷職業名稱是否輸入
 function checkcareer(){
     var career = $(".usercareer").val();
     if ( career == "" ){

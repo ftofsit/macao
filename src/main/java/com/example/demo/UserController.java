@@ -1,14 +1,17 @@
 package com.example.demo;
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 @Controller
-
+@RequestMapping("/user")
 public class UserController {
-    @RequestMapping("/user")
     //用戶登錄頁面
     public String user(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
@@ -22,7 +25,7 @@ public class UserController {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
         model.addAttribute("uploadimg", "/images/upload.png");
-        return "register";
+        return "user/register";
     }
 
     @RequestMapping("/changepw")
@@ -30,7 +33,7 @@ public class UserController {
     public String change(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
-        return "changepw";
+        return "user/changepw";
     }
 
     @RequestMapping("/collection")
@@ -38,22 +41,23 @@ public class UserController {
     public String collection(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
 
-        return "collection";
+        return "user/collection";
     }
+
 
     @RequestMapping("/retrievepw")
     //找回密碼
     public String retrievepw(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
-        return "retrievepw";
+        return "user/retrievepw";
     }
 
     @RequestMapping("/apply")
     //我的活動
     public String apply(Model model) {
         model.addAttribute("goodsorder", getusergoods());
-        return "apply";
+        return "user/apply";
     }
 
     @RequestMapping("/userindex")
@@ -68,7 +72,7 @@ public class UserController {
         model.addAttribute("login_time", " 您的上一次登錄時間：2019-01-16 12:05:40");
         model.addAttribute("user_bonus", "共計 0 個,價值 $0.00 ");
         model.addAttribute("user_tip", "您最近30天內報名了0個活動 ");
-        return "userindex";
+        return "user/userindex";
     }
 
     @RequestMapping("/userinfo")
@@ -77,7 +81,7 @@ public class UserController {
         model.addAttribute("userid", "sadsadsa ");
         model.addAttribute("userbirthday", "2019/04/10");
         model.addAttribute("usermobile", "65764474");
-        return "userinfo";
+        return "user/userinfo";
     }
 
     @RequestMapping("/userphone")
@@ -85,7 +89,7 @@ public class UserController {
     public String userphone(Model model) {
         model.addAttribute("content", getContent());
         model.addAttribute("tip", "活動評論");
-        return "userphone";
+        return "user/userphone";
     }
 
 
@@ -94,7 +98,7 @@ public class UserController {
     public String usercomment(Model model) {
         model.addAttribute("content", getContent());
         model.addAttribute("tip", "活動評論");
-        return "usercomment";
+        return "user/usercomment";
     }
 
     @RequestMapping("/userbonus")
@@ -102,7 +106,7 @@ public class UserController {
     public String userbonus(Model model) {
         model.addAttribute("userbon", "yes");
         model.addAttribute("bonus", getuserbonu());
-        return "userbonus";
+        return "user/userbonus";
     }
 
     @RequestMapping("/userback")
@@ -110,21 +114,21 @@ public class UserController {
     public String userback(Model model) {
         model.addAttribute("backs", getuserbacks());
         model.addAttribute("userbacks", "yes");
-        return "userback";
+        return "user/userback";
     }
 
     @RequestMapping("/actcount")
     //用戶退款
     public String actcount(Model model) {
         model.addAttribute("backs", getuserbacks());
-        return "actcount";
+        return "user/actcount";
     }
 
     @RequestMapping("/useravatar")
     //用戶退款
     public String useravatar(Model model) {
         model.addAttribute("userimg", "/images/upload.png");
-        return "useravatar";
+        return "user/useravatar";
     }
 
     @RequestMapping("/userdetail")
@@ -144,7 +148,7 @@ public class UserController {
         model.addAttribute("red_packet", "$10.00");
         model.addAttribute("pay_method", "線下付款");
         model.addAttribute("total_amount", "$1110.00");
-        return "userdetail";
+        return "user/userdetail";
     }
 
 
@@ -160,7 +164,7 @@ public class UserController {
         model.addAttribute("login_time", " 您的上一次登錄時間：2019-01-16 12:05:40");
         model.addAttribute("user_bonus", "共計 0 個,價值 $0.00 ");
         model.addAttribute("user_tip", "您最近30天內報名了0個活動 ");
-        return "usercenter";
+        return "user/usercenter";
     }
 
     public List<contents> getContent() {
