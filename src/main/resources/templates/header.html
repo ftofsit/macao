@@ -12,15 +12,14 @@
     <div class="navbar navbar-default " style="margin-bottom:0px">
         <div class="container">
             <div class="navbar-header" style="float:right">
-                <a class="navbar-brand" href="#" style="font-size: 13px"> 用戶登錄</a>
-                <a class="navbar-brand" href="#" style="font-size: 13px"> 用戶註冊</a>
+                <a class="navbar-brand" href="/user" style="font-size: 13px"> 用戶登錄</a>
+                <a class="navbar-brand" href="/user/register" style="font-size: 13px"> 用戶註冊</a>
 
                 <div class="btn-group navbar-brand">
-                    <a class="dropdown-toggle button-style" type="button" data-toggle="dropdown"  href="#" style="font-size: 13px;margin-left:0px;height:auto" > 用戶信息</a>
+                    <a class="dropdown-toggle button-style" type="button" data-toggle="dropdown"  href="#" style="font-size: 13px;margin-left:0px;height:auto" id="openmenu"  > 用戶信息</a>
                     <ul class="dropdown-menu " role="menu" style="text-align: left;margin:1px 0px;">
-                        <li><a href="#">功能</a></li>
-                        <li><a href="#">另一个功能</a></li>
-                        <li><a href="#">其他</a></li>
+                        <li><a href="#">我的訂單</a></li>
+                        <li><a href="#">我的收藏</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,17 +39,23 @@
         </div>
         <div  class="col-xs-1 col-sm-1">
         </div>
-        <div class="btn-group navbar-brand col-xs-2 col-sm-2" role="group" style="margin-top:1vh">
-            <a class="navbar-brand dropdown-toggle shipping-cart" type="button" data-toggle="dropdown"  href="#" > 用戶信息</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Dropdown link</a></li>
-                <li><a href="#">Dropdown link</a></li>
-            </ul>
+        <div class="col-xs-2 col-sm-2" >
+            <div class="btn-group navbar-brand" role="group" style="display: inline-table;padding: 2vh 0 0 0" >
+                <button class="navbar-brand dropdown-toggle shipping-cart" data-toggle="dropdown" id="actbar" type="button"  href="#" aria-expanded="false" >
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-gouwuche"></use>
+                    </svg>
+                    購票中心(<span th:text="${actnum}"></span>)
+                </button>
+                <ul class="dropdown-menu"  role="menu" style="margin: 0px">
+                    <li th:if="${actnum} == 0 "><a href="#" >購票中心還沒有活動，趕快選購吧！</a></li>
+                    <li th:if="${actnum} != 0 "><a href="#">Dropdown link</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
 
 </div>
-
 </body>
 </html>

@@ -6,6 +6,8 @@ $(function() {
     })
 
 })
+
+
 //打開頁面
 function open1(ob)
 {

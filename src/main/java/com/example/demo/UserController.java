@@ -13,10 +13,11 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
     //用戶登錄頁面
-    public String user(Model model) {
+    @RequestMapping("")
+    public String index(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
-        return "user";
+        return "member";
     }
 
     @RequestMapping("/register")
@@ -25,6 +26,7 @@ public class UserController {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
         model.addAttribute("uploadimg", "/images/upload.png");
+        model.addAttribute("actnum", "1");
         return "user/register";
     }
 

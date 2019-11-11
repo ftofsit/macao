@@ -226,6 +226,7 @@
     width: 40%;
     height: 40%;
     margin-bottom: 1rem;
+    margin-left:1rem;
     float: left;
 }
 .reg_main .user-register-panel ul .uploadimg div input{
@@ -361,4 +362,13 @@
     color: #333;
     font-weight: bold;
     width: 100%;
+}
+
+
+.icon{
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    overflow: hidden;
+    vertical-align:middle;
 }
