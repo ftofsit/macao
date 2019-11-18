@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+</head>
+<body>
+
+<div class="my_list_details details_act" th:fragment="refunpages">
+    <div class="ilizi cle">
+        <div class="box">
+            <div class="box_1">
+                <h5><span>售後詳情</span></h5>
+
+                <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+                    <tbody>
+                    <tr>
+                        <td width="15%" align="right" bgcolor="#ffffff">原活動號：</td>
+                        <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${act_time}></td>
+                    </tr>
+                    <tr>
+                        <td align="right" bgcolor="#ffffff">活動名稱：</td>
+                        <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${act_state}></td>
+                    </tr>
+                    <tr>
+                        <td align="right" bgcolor="#ffffff">店鋪名：</td>
+                        <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${pay_state}></td>
+                    </tr>
+                    <tr>
+                        <td align="right" bgcolor="#ffffff">售後類型：</td>
+                        <td align="left" bgcolor="#ffffff" style="text-align: left" th:text=${pay_state}></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="blank"></div>
+
+                <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+                    <tbody>
+                        <tr>
+                            <td align="right" width="20%">退款活動名：</td>
+                            <td align="left"  width="30%" th:text=${refun_name}></td>
+                            <td align="right"  width="20%">數量：</td>
+                            <td align="left" width="30%" th:text=${refun_nume}></td>
+                        </tr>
+                        <tr>
+                            <td align="right" width="20%">類型：</span></td>
+                            <td align="left"  width="30%" th:text=${refun_type}></td>
+                        </tr>
+                        <tr>
+                            <td align="right">應退金額：</td>
+                            <td align="left" th:text=${refun_amount}></td>
+                            <td align="right">實退金額：</td>
+                            <td align="left" th:text=${refun_actual}></td>
+                        </tr>
+                        <tr>
+                            <td align="right">處理狀態：</td>
+                            <td align="left"><span th:text=${refun_status}></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="blank"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

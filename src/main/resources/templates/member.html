@@ -21,20 +21,20 @@
             <font class="login-name">會員登錄</font>
         </div>
         <div class="user-login-panel">
-            <form name="formlogin" action=""  method="post" onsubmit="return userlogin()">
+            <form name="formlogin" action="/user/usercenter"  method="post" onsubmit="return userlogin()">
                 <ul>
                     <li class="usernum">
-                        <input class="login-id" name="login-id" placeholder="用戶名、手機" maxlength="20" oninput="checkusernum()">
+                        <input class="login-id" name="login_id" placeholder="用戶名、手機" maxlength="20" oninput="checkusernum()">
                         <span class="error_icon"></span>
                     </li>
                     <li class="error_box" id="usernum_notice"></li>
                     <li class="userpwd">
-                        <input class="login-pw" name="login-pw"  placeholder="密碼"  maxlength="20" oninput="checkuserpwd()" >
+                        <input class="login-pw" name="login_pw"  placeholder="密碼"  maxlength="20" oninput="checkuserpwd()" >
                         <span class="error_icon"></span>
                     </li>
                     <li class="error_box" id="userpwd_notice"></li>
                     <li class="code">
-                        <input class="login-code" name="login-code"  placeholder="驗證碼" maxlength="4" oninput="checkcode()">
+                        <input class="login-code" name="login_code"  placeholder="驗證碼" maxlength="4" oninput="checkcode()">
                         <span class="error_icon"></span>
                         <img th:src=${img_code}  id="usercode" >
                     </li>
@@ -65,5 +65,6 @@
 <script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
 <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 <script th:src="@{/jquery/user.js}"></script>
+<script th:src="@{/jquery/iconfont.js}"></script>
 </body>
 </html>

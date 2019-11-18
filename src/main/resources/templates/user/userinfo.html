@@ -1,14 +1,20 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
 <head>
-    <!--<meta content="text/html;charset=UTF-8"/>-->
-    <!--<meta name="viewport" content="width=device-width,initial-scale=1"/>-->
-    <!--<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>-->
-    <!--<link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>-->
-    <!--<link th:href="@{/css/usermessage.css}" rel="stylesheet"/>-->
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/header/css/header.css}" rel="stylesheet"/>
+    <link th:href="@{/css/user.css}" rel="stylesheet"/>
+    <link th:href="@{/css/usermessage.css}" rel="stylesheet"/>
 </head>
 <body>
-<div class="my_nala_centre"  th:fragment="userinfo">
+<!--header-->
+<div class="header" th:include="header::header"></div>
+<!--header end-->
+
+<div class="my_nala_centre" >
     <div class="ilizi">
         <div class="box">
             <div class="box_1">
@@ -59,5 +65,14 @@
         </div>
     </div>
 </div>
+
+<!--footer-->
+<div  class="text-center" th:include="footer::copyright"></div>
+<!--footer end-->
+
 </body>
+<script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/jquery/user.js}"></script>
+<script th:src="@{/jquery/iconfont.js}"></script>
 </html>

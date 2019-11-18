@@ -22,6 +22,7 @@ public class HomeController {
         model.addAttribute("singlePerson", single);
         model.addAttribute("people", people);
         model.addAttribute("recommend",getRecommend());
+        model.addAttribute("actnum", "0");
         return "/test";
     }
 

@@ -738,3 +738,7 @@ a:hover{
 }
 
 
+/*遮罩層*/
+.blank{
+    padding: 2vh;
+}

@@ -35,7 +35,7 @@
                             <td align="center" bgcolor="#ffffff" th:text=${backs.application_time}></td>
                             <td align="center" bgcolor="#ffffff" th:text=${backs.amount}></td>
                             <td align="center" bgcolor="#ffffff" th:text=${backs.act_status}></td>
-                            <td align="center" bgcolor="#ffffff" ><a th:href=${backs.cancel}>取消</a> | <a th:href=${backs.view}>查看</a></td>
+                            <td align="center" bgcolor="#ffffff" ><a th:id=${backs.order_id} onclick="cancelapp(this)">取消</a> | <a id="refunpages" onclick="seedetail(this)">查看</a></td>
                         </tr>
                         </tbody>
                     </table>

@@ -453,8 +453,19 @@ function bindmobile(){
     }
 }
 
-
+//返回購物車
 function returntocart() {
     $num = $(".returncart").val();
     console.log($mun);
+}
+
+//登錄頁面
+function loginuser(){
+
+}
+
+//取消退款訂單
+function cancelapp(oid){
+    var oid = oid.id;
+    alert(oid);
 }

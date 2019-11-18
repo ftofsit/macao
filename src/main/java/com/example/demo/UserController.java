@@ -3,9 +3,10 @@ package com.example.demo;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.sql.RowSet;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class UserController {
     public String index(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
+        model.addAttribute("actnum", "0");
         return "member";
     }
 
@@ -35,6 +37,7 @@ public class UserController {
     public String change(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
+        model.addAttribute("actnum", "1");
         return "user/changepw";
     }
 
@@ -52,6 +55,7 @@ public class UserController {
     public String retrievepw(Model model) {
         model.addAttribute("img_code", "/images/captcha.png");
         model.addAttribute("pwd_url", "http://localhost:8080/user?id=retrievepw");
+        model.addAttribute("actnum", "1");
         return "user/retrievepw";
     }
 
@@ -74,20 +78,18 @@ public class UserController {
         model.addAttribute("login_time", " 您的上一次登錄時間：2019-01-16 12:05:40");
         model.addAttribute("user_bonus", "共計 0 個,價值 $0.00 ");
         model.addAttribute("user_tip", "您最近30天內報名了0個活動 ");
+        model.addAttribute("actnum", "1");
         return "user/userindex";
     }
 
     @RequestMapping("/userinfo")
     //用戶首頁
     public String userinfo(Model model) {
-        model.addAttribute("userid", "sadsadsa ");
-        model.addAttribute("userbirthday", "2019/04/10");
-        model.addAttribute("usermobile", "65764474");
-        return "user/userinfo";
+        return "redirect:/user/userrouter?id=userinfo";
     }
 
     @RequestMapping("/userphone")
-    //用戶評論
+    //用戶綁定手機號
     public String userphone(Model model) {
         model.addAttribute("content", getContent());
         model.addAttribute("tip", "活動評論");
@@ -119,15 +121,23 @@ public class UserController {
         return "user/userback";
     }
 
-    @RequestMapping("/actcount")
+    @RequestMapping("/refunpages")
     //用戶退款
+    public String refunpages(Model model) {
+        model.addAttribute("backs", getuserbacks());
+        model.addAttribute("userbacks", "yes");
+        return "user/refunpages";
+    }
+
+    @RequestMapping("/actcount")
+    //活動參與統計
     public String actcount(Model model) {
         model.addAttribute("backs", getuserbacks());
-        return "user/actcount";
+        return "user/useractcount";
     }
 
     @RequestMapping("/useravatar")
-    //用戶退款
+    //更換頭像
     public String useravatar(Model model) {
         model.addAttribute("userimg", "/images/upload.png");
         return "user/useravatar";
@@ -153,20 +163,35 @@ public class UserController {
         return "user/userdetail";
     }
 
+    //返回路由
+    @GetMapping(value="/userrouter")
+    public String userrouter( @RequestParam String id,  Model model){
+        switch (id){
+            case "usercenter":{
+                model.addAttribute("img_code", "/images/captcha.png");
+                model.addAttribute("secon_ame ", "admin123");
+                model.addAttribute("user_title", "歡迎您回到 活動雲台 ~");
+                model.addAttribute("login_time", " 您的上一次登錄時間：2019-01-16 12:05:40");
+                model.addAttribute("user_bonus", "共計 0 個,價值 $0.00 ");
+                model.addAttribute("user_tip", "您最近30天內報名了0個活動 ");
+                model.addAttribute("actnum", "1");
+                return "user/usercenter";
+            }
+            case "userinfo":{
+                model.addAttribute("userid", "sadsadsa ");
+                model.addAttribute("userbirthday", "2019/04/10");
+                model.addAttribute("usermobile", "65764474");
+                return "user/userinfo";
+            }
+        }
+        return "";
+    }
 
-
-    @RequestMapping("/usercenter")
     //用戶中心首頁
-    public String usercenter(Model model) {
-        model.addAttribute("img_code", "/images/captcha.png");
-        model.addAttribute("user_name", "admin888");
-        model.addAttribute("last_name", "admin888");
-        model.addAttribute("secon_ame ", "admin123");
-        model.addAttribute("user_title", "歡迎您回到 活動雲台 ~");
-        model.addAttribute("login_time", " 您的上一次登錄時間：2019-01-16 12:05:40");
-        model.addAttribute("user_bonus", "共計 0 個,價值 $0.00 ");
-        model.addAttribute("user_tip", "您最近30天內報名了0個活動 ");
-        return "user/usercenter";
+    @PostMapping(value="/usercenter")
+    public String usercenter(@RequestParam String login_id, Model model)
+    {
+        return "redirect:/user/userrouter?id=usercenter";
     }
 
     public List<contents> getContent() {
